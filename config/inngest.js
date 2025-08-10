@@ -45,7 +45,7 @@ export const syncUserUpdation = inngest.createFunction(
   }
 );
 // Inngest Function to Delete user from Database
-export const syncUserDeletion = inngest.cfreateFunction(
+export const syncUserDeletion = inngest.createFunction(
   {
     id: "delete-user-width-clerk",
   },
@@ -56,4 +56,4 @@ export const syncUserDeletion = inngest.cfreateFunction(
     await connectDB();
     await User.findByIdAndDelete(id);
   }
-)
+);
