@@ -1,6 +1,9 @@
 import { clerkMiddleware } from '@clerk/nextjs/server';
 
-export default clerkMiddleware();
+// Allow Inngest to access the functions endpoint without auth
+export default clerkMiddleware({
+  publicRoutes: ['/api/inngest'],
+});
 
 export const config = {
   matcher: [
